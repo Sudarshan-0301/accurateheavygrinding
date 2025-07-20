@@ -52,6 +52,13 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				// Industrial theme colors
+				'steel-blue': 'hsl(var(--steel-blue))',
+				'steel-blue-light': 'hsl(var(--steel-blue-light))',
+				'industrial-grey': 'hsl(var(--industrial-grey))',
+				'industrial-grey-dark': 'hsl(var(--industrial-grey-dark))',
+				'precision-blue': 'hsl(var(--precision-blue))',
+				'manufacturing-accent': 'hsl(var(--manufacturing-accent))',
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
