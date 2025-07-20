@@ -1,4 +1,4 @@
-import { Building, Mail, Phone, Linkedin, Facebook, Twitter } from 'lucide-react';
+import { Building, Mail, Phone } from 'lucide-react';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -88,21 +88,6 @@ const Footer = () => {
               © {currentYear} Accurate Heavy Grinding. All rights reserved.
             </div>
 
-            {/* Social Media Links */}
-            <div className="flex items-center space-x-4">
-              <span className="text-sm text-primary-foreground/80">Follow us:</span>
-              <div className="flex space-x-3">
-                <div className="bg-primary-foreground/10 p-2 rounded-full hover:bg-manufacturing-accent/20 transition-colors cursor-pointer">
-                  <Linkedin className="h-4 w-4 text-manufacturing-accent" />
-                </div>
-                <div className="bg-primary-foreground/10 p-2 rounded-full hover:bg-manufacturing-accent/20 transition-colors cursor-pointer">
-                  <Facebook className="h-4 w-4 text-manufacturing-accent" />
-                </div>
-                <div className="bg-primary-foreground/10 p-2 rounded-full hover:bg-manufacturing-accent/20 transition-colors cursor-pointer">
-                  <Twitter className="h-4 w-4 text-manufacturing-accent" />
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </div>
