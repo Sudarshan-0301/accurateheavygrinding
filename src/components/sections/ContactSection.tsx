@@ -234,12 +234,8 @@ const ContactSection = () => {
                     <span className="text-foreground font-medium">Closed</span>
                   </div>
                   <div className="flex justify-between">
-                    <span className="text-muted-foreground">Friday - Saturday</span>
+                    <span className="text-muted-foreground">Friday - Sunday</span>
                     <span className="text-foreground font-medium">8:30 AM - 6:00 PM</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-muted-foreground">Sunday</span>
-                    <span className="text-foreground font-medium">Closed</span>
                   </div>
                 </div>
               </CardContent>
