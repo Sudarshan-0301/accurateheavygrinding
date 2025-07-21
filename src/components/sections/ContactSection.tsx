@@ -22,12 +22,14 @@ const ContactSection = () => {
     setIsSubmitting(true);
 
     try {
+      const formBody = new URLSearchParams(formData).toString();
+
       const response = await fetch('https://script.google.com/macros/s/AKfycbw8WjSgA2H199URjdTqVWzcvfeYK7VSTDE96fjDmFRPmg8tbii8PoKiIVn2Ss8seKUTvg/exec', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json',
+          'Content-Type': 'application/x-www-form-urlencoded',
         },
-        body: JSON.stringify(formData),
+        body: formBody,
       });
 
       if (response.ok) {
