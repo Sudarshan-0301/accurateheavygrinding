@@ -22,7 +22,7 @@ const ContactSection = () => {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch('YOUR_URL_HERE', {
+      const response = await fetch('https://script.google.com/macros/s/AKfycbw8WjSgA2H199URjdTqVWzcvfeYK7VSTDE96fjDmFRPmg8tbii8PoKiIVn2Ss8seKUTvg/exec', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
