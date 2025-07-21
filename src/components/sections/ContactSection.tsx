@@ -21,15 +21,33 @@ const ContactSection = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    setTimeout(() => {
-      toast({
-        title: "Quote Request Submitted!",
-        description: "Thank you for your inquiry. We'll contact you within 24 hours.",
+    try {
+      const response = await fetch('YOUR_URL_HERE', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
       });
-      setFormData({ fullName: '', mobile: '', email: '', serviceRequirement: '' });
+
+      if (response.ok) {
+        toast({
+          title: "Quote Request Submitted!",
+          description: "Thank you for your inquiry. We'll contact you within 24 hours.",
+        });
+        setFormData({ fullName: '', mobile: '', email: '', serviceRequirement: '' });
+      } else {
+        throw new Error('Failed to submit');
+      }
+    } catch (error) {
+      toast({
+        title: "Submission Failed",
+        description: "Please try again or contact us directly.",
+        variant: "destructive",
+      });
+    } finally {
       setIsSubmitting(false);
-    }, 1000);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
