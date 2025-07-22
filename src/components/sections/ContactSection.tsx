@@ -7,6 +7,8 @@ import { Label } from '@/components/ui/label';
 import { useToast } from '@/hooks/use-toast';
 import { Mail, Phone, MapPin, Send, Clock, Star } from 'lucide-react';
 
+const APP_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbw8WjSgA2H199URjdTqVWzcvfeYK7VSTDE96fjDmFRPmg8tbii8PoKiIVn2Ss8seKUTvg/exec'
+
 const ContactSection = () => {
   const { toast } = useToast();
   const [formData, setFormData] = useState({
@@ -24,7 +26,7 @@ const ContactSection = () => {
     try {
       const formBody = new URLSearchParams(formData).toString();
 
-      const response = await fetch('https://script.google.com/macros/s/AKfycbw8WjSgA2H199URjdTqVWzcvfeYK7VSTDE96fjDmFRPmg8tbii8PoKiIVn2Ss8seKUTvg/exec', {
+      const response = await fetch(APP_SCRIPT_URL, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded',
