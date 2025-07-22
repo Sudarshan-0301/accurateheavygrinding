@@ -1,0 +1,27 @@
+function doPost(e) {
+  var sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("Sheet1");
+
+  console.log(e)
+
+  // Parse data
+  var fullName = e.parameter.fullName;
+  var mobile = e.parameter.mobile;
+  var email = e.parameter.email;
+  var serviceRequirement = e.parameter.serviceRequirement;
+
+  // Append to sheet
+  sheet.appendRow([fullName, mobile, email, serviceRequirement, new Date()]);
+
+  // Send email for notification
+  var recipient = "accurateheavygrinding@outlook.com"; // Change this
+  var subject = "New Quote Request from " + fullName;
+  var body = `
+    Full Name: ${fullName}
+    Mobile: ${mobile}
+    Email: ${email}
+    Requirement: ${serviceRequirement}
+  `;
+  MailApp.sendEmail(recipient, subject, body);
+
+  return ContentService.createTextOutput("Success").setMimeType(ContentService.MimeType.TEXT);
+}
