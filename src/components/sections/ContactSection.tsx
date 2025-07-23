@@ -182,8 +182,15 @@ const ContactSection = () => {
                       <Phone className="h-6 w-6 text-primary" />
                     </div>
                     <div>
-                      <h4 className="font-semibold text-foreground mb-1">Phone Numbers</h4>
-                      <p className="text-muted-foreground">9225505785 / 9225505784</p>
+                      <h4 className="font-semibold text-foreground mb-1">📞 Call Us</h4>
+                      <div className="space-y-1">
+                        <a href="tel:+919225505785" className="text-primary hover:text-primary/80 transition-colors block">
+                          +91 9225505785
+                        </a>
+                        <a href="tel:+919225505784" className="text-primary hover:text-primary/80 transition-colors block">
+                          +91 9225505784
+                        </a>
+                      </div>
                       <p className="text-sm text-muted-foreground mt-1">Available: Mon-Sat, 9 AM - 6 PM</p>
                     </div>
                   </div>
@@ -193,8 +200,10 @@ const ContactSection = () => {
                       <Mail className="h-6 w-6 text-primary" />
                     </div>
                     <div>
-                      <h4 className="font-semibold text-foreground mb-1">Email Address</h4>
-                      <p className="text-muted-foreground">accurateheavygrinding@outlook.com</p>
+                      <h4 className="font-semibold text-foreground mb-1">📧 Email</h4>
+                      <a href="mailto:accurateheavygrinding@outlook.com" className="text-primary hover:text-primary/80 transition-colors">
+                        accurateheavygrinding@outlook.com
+                      </a>
                       <p className="text-sm text-muted-foreground mt-1">We respond within 24 hours</p>
                     </div>
                   </div>
@@ -204,12 +213,17 @@ const ContactSection = () => {
                       <MapPin className="h-6 w-6 text-primary" />
                     </div>
                     <div>
-                      <h4 className="font-semibold text-foreground mb-1">Our Location</h4>
-                      <p className="text-muted-foreground leading-relaxed">
+                      <h4 className="font-semibold text-foreground mb-1">📍 Address</h4>
+                      <a 
+                        href="https://maps.app.goo.gl/mmMkzPEMb7DVRd1P8" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="text-primary hover:text-primary/80 transition-colors leading-relaxed"
+                      >
                         Gat No. 52, RTO Road, Near Malhar Gad Road,<br />
                         Behind Aai Saheb Hotel, Kalewadi, Dive,<br />
                         Tal-Purandar, Pune - 412301
-                      </p>
+                      </a>
                     </div>
                   </div>
                 </div>

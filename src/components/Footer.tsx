@@ -51,11 +51,20 @@ const Footer = () => {
             <div className="space-y-3 text-sm">
               <div className="flex items-center space-x-3">
                 <Phone className="h-4 w-4 text-manufacturing-accent flex-shrink-0" />
-                <span className="text-primary-foreground/90">9225505785 / 9225505784</span>
+                <div className="space-y-1">
+                  <a href="tel:+919225505785" className="text-manufacturing-accent hover:text-primary-foreground transition-colors block">
+                    📞 +91 9225505785
+                  </a>
+                  <a href="tel:+919225505784" className="text-manufacturing-accent hover:text-primary-foreground transition-colors block">
+                    📞 +91 9225505784
+                  </a>
+                </div>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="h-4 w-4 text-manufacturing-accent flex-shrink-0" />
-                <span className="text-primary-foreground/90">accurateheavygrinding@outlook.com</span>
+                <a href="mailto:accurateheavygrinding@outlook.com" className="text-manufacturing-accent hover:text-primary-foreground transition-colors">
+                  📧 accurateheavygrinding@outlook.com
+                </a>
               </div>
               <div className="text-primary-foreground/90">
                 <strong>GST:</strong> 27ACBFA6452H1ZH<br />
