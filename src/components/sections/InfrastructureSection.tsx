@@ -32,38 +32,38 @@ const InfrastructureSection = () => {
     },
     {
       id: 5,
-      title: "Final Laser Inspection Setup",
-      description: "Laser alignment ensures 100% precision before final dispatch.",
+      title: "Torque Test Inspection",
+      description: "Torque testing is conducted on large assemblies to ensure structural and joint integrity during precision operations.",
       image: "/lovable-uploads/ce3ae9e4-0811-4ed1-ac84-ae203e5ecf1a.png",
-      alt: "Quality inspector performing laser inspection on granite surface plate"
+      alt: "Torque test inspection on large assemblies"
     },
     {
       id: 6,
-      title: "Flatness Inspection By DigitalInstrument",
-      description: "Digital flatness inspection for CMM granite plates and machine beds.",
+      title: "Flatness Inspection Using Digital Instruments",
+      description: "High-accuracy flatness measurements performed using calibrated digital levels, ensuring compliance with surface flatness tolerances.",
       image: "/lovable-uploads/9c3b66e1-9a32-482d-83b9-c936ff3c9c85.png",
-      alt: "Digital level flatness checking process"
+      alt: "Flatness inspection using digital instruments"
     },
     {
       id: 7,
-      title: "Advanced Measurement & Calibration",
-      description: "Precision measurement tools ensuring exact specifications and tolerances.",
+      title: "Final Assembly Laser Inspection",
+      description: "Laser-based alignment ensures accurate final positioning and flatness verification before dispatch.",
       image: "/lovable-uploads/4dab7894-2392-4f24-9e86-56e804e0a7a9.png",
-      alt: "Advanced measurement and calibration setup"
+      alt: "Final assembly laser inspection"
     },
     {
       id: 8,
-      title: "Quality Control Workstation",
-      description: "Dedicated workstation for comprehensive quality inspections and documentation.",
+      title: "Flatness Inspection Using Digital Instruments",
+      description: "Repeatable and precise flatness verification process carried out with NABL-traceable digital equipment.",
       image: "/lovable-uploads/2c6d8a0d-343f-43dc-979b-6485b6b02a2e.png",
-      alt: "Quality control workstation with measurement tools"
+      alt: "Flatness inspection using digital instruments"
     },
     {
       id: 9,
-      title: "Granite Temperature Check with Testo Thermometer",
-      description: "Surface temperature check for better lapping control and calibration accuracy.",
+      title: "Granite Temperature Inspection with Testo Digital Thermometer",
+      description: "Thermal measurement of granite surfaces using Testo meters to ensure temperature-controlled calibration and lapping.",
       image: "/lovable-uploads/765a99c3-b206-46a9-99f8-fa427dbc4308.png",
-      alt: "Temperature checking with Testo thermometer for precision control"
+      alt: "Granite temperature inspection with Testo digital thermometer"
     }
   ];
 
@@ -73,7 +73,7 @@ const InfrastructureSection = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-foreground mb-4">
-            🛠️ Our Infrastructure & Technical Strength
+            Our Infrastructure & Technical Strength
           </h2>
           <p className="text-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed">
             We are equipped with world-class granite calibration machinery, laser inspection tools, 
@@ -110,7 +110,7 @@ const InfrastructureSection = () => {
                       
                       {/* Technical Badge */}
                       <div className="inline-flex items-center px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium">
-                        ✓ Precision Certified
+                        Precision Certified
                       </div>
                     </div>
                   </div>
@@ -132,16 +132,16 @@ const InfrastructureSection = () => {
             </p>
             <div className="flex flex-wrap justify-center gap-4 text-sm text-muted-foreground">
               <span className="flex items-center gap-2">
-                🏭 <strong>25,000+ sq ft</strong> Manufacturing Area
+                <strong>25,000+ sq ft</strong> Manufacturing Area
               </span>
               <span className="flex items-center gap-2">
-                🎯 <strong>±0.001mm</strong> Precision Accuracy
+                <strong>±0.001mm</strong> Precision Accuracy
               </span>
               <span className="flex items-center gap-2">
-                🌡️ <strong>Temperature Controlled</strong> Environment
+                <strong>Temperature Controlled</strong> Environment
               </span>
               <span className="flex items-center gap-2">
-                📊 <strong>ISO Standards</strong> Compliance
+                <strong>ISO Standards</strong> Compliance
               </span>
             </div>
           </div>
