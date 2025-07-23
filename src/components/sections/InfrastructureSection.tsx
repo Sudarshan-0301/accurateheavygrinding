@@ -39,7 +39,7 @@ const InfrastructureSection = () => {
     },
     {
       id: 6,
-      title: "Flatness Checking with Digital Level",
+      title: "Flatness Inspection By DigitalInstrument",
       description: "Digital flatness inspection for CMM granite plates and machine beds.",
       image: "/lovable-uploads/9c3b66e1-9a32-482d-83b9-c936ff3c9c85.png",
       alt: "Digital level flatness checking process"
