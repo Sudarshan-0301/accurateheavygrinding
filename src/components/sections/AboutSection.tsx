@@ -11,8 +11,6 @@ const AboutSection = () => {
   const companyDetails = [
     { icon: Building, label: 'GST No', value: '27ACBFA6452H1ZH' },
     { icon: Award, label: 'MSME No', value: 'UDYAM-MH-26-0438749 (Micro)' },
-    { icon: Mail, label: 'Email', value: 'accurateheavygrinding@outlook.com' },
-    { icon: Phone, label: 'Phone', value: '9225505785 / 9225505784' },
   ];
 
   return (
