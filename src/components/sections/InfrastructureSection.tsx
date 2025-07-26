@@ -91,7 +91,7 @@ const InfrastructureSection = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-foreground mb-4">
-            Our Infrastructure & Technical Strength
+            Advanced Machines & Quality Control Facility
           </h2>
           <p className="text-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed">
             We are equipped with world-class granite calibration machinery, laser inspection tools, 
@@ -100,41 +100,25 @@ const InfrastructureSection = () => {
         </div>
 
         {/* Infrastructure Grid */}
-        <div className="space-y-12">
-          {infrastructureItems.map((item, index) => (
-            <Card key={item.id} className="overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <CardContent className="p-0">
-                <div className={`grid lg:grid-cols-2 gap-0 ${index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''}`}>
-                  {/* Image Section */}
-                  <div className={`relative ${index % 2 === 1 ? 'lg:order-2' : ''}`}>
-                    <img
-                      src={item.image}
-                      alt={item.alt}
-                      className="w-full h-[400px] lg:h-[500px] object-cover"
-                      loading="lazy"
-                    />
-                    <div className="absolute inset-0 bg-black/10 hover:bg-black/0 transition-colors duration-300"></div>
-                  </div>
-                  
-                  {/* Content Section */}
-                  <div className={`p-8 lg:p-12 flex flex-col justify-center ${index % 2 === 1 ? 'lg:order-1' : ''}`}>
-                     <div className="space-y-4">
-                       <div className="flex items-start gap-3">
-                         <item.icon className="w-6 h-6 text-primary mt-1 flex-shrink-0" />
-                         <h3 className="text-2xl lg:text-3xl font-bold text-foreground leading-tight">
-                           {item.title}
-                         </h3>
-                       </div>
-                      <p className="text-lg text-muted-foreground leading-relaxed">
-                        {item.description}
-                      </p>
-                      
-                      {/* Technical Badge */}
-                      <div className="inline-flex items-center px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium">
-                        Precision Certified
-                      </div>
-                    </div>
-                  </div>
+        <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+          {infrastructureItems.map((item) => (
+            <Card key={item.id} className="border-none shadow-lg hover:shadow-xl transition-all duration-300 group overflow-hidden">
+              <div className="aspect-[4/3] overflow-hidden">
+                <img 
+                  src={item.image} 
+                  alt={item.alt}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  loading="lazy"
+                />
+              </div>
+              <CardContent className="p-6">
+                <div className="flex items-start gap-3 mb-3">
+                  <item.icon className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
+                  <h3 className="text-xl font-bold text-foreground leading-tight">{item.title}</h3>
+                </div>
+                <p className="text-muted-foreground text-sm leading-relaxed mb-3">{item.description}</p>
+                <div className="inline-flex items-center px-3 py-1 bg-primary/10 text-primary rounded-full text-xs font-medium">
+                  Precision Certified
                 </div>
               </CardContent>
             </Card>

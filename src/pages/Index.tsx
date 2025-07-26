@@ -5,7 +5,6 @@ import AboutSection from '@/components/sections/AboutSection';
 import ServicesSection from '@/components/sections/ServicesSection';
 import ProcessSection from '@/components/sections/ProcessSection';
 import IndustriesSection from '@/components/sections/IndustriesSection';
-import EquipmentSection from '@/components/sections/EquipmentSection';
 import InfrastructureSection from '@/components/sections/InfrastructureSection';
 import ContactSection from '@/components/sections/ContactSection';
 import Footer from '@/components/Footer';
@@ -36,7 +35,7 @@ const Index = () => {
   // Update active section based on scroll position
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['home', 'about', 'services', 'process', 'industries', 'equipment', 'contact'];
+      const sections = ['home', 'about', 'services', 'process', 'industries', 'infrastructure', 'contact'];
       const scrollPosition = window.scrollY + 100;
 
       for (const section of sections.reverse()) {
@@ -70,7 +69,6 @@ const Index = () => {
         <ServicesSection />
         <ProcessSection />
         <IndustriesSection />
-        <EquipmentSection />
         <InfrastructureSection />
         <ContactSection />
       </main>
