@@ -91,7 +91,7 @@ const InfrastructureSection = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-foreground mb-4">
-            Advanced Machines & Quality Control Facility
+            Machines & Quality Control Facility
           </h2>
           <p className="text-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed">
             We are equipped with world-class granite calibration machinery, laser inspection tools, 
