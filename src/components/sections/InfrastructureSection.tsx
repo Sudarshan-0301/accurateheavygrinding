@@ -5,14 +5,6 @@ const InfrastructureSection = () => {
   const infrastructureItems = [
     {
       id: 1,
-      title: "Controlled Temperature Inspection Room",
-      description: "Climate-controlled assembly area ensuring accuracy in final laser and torque inspections.",
-      image: "/lovable-uploads/70e04d2d-4977-44a5-92fc-ddaae663ef18.png",
-      alt: "Controlled temperature inspection room with multiple granite surface plates",
-      icon: Building
-    },
-    {
-      id: 2,
       title: "Double Column VMC Machine",
       description: "Size: 4000 mm × 3000 mm × 600 mm",
       image: "/lovable-uploads/f9b15fad-c2c1-45b5-a7fa-b2bbc58e4986.png",
@@ -20,7 +12,7 @@ const InfrastructureSection = () => {
       icon: Cog
     },
     {
-      id: 3,
+      id: 2,
       title: "Precision Grinding Machine",
       description: "Size: 3000 mm × 600 mm × 600 mm",
       image: "/lovable-uploads/d8d8a0a1-0992-42cd-a5de-a9872bfaa5b6.png",
@@ -28,7 +20,7 @@ const InfrastructureSection = () => {
       icon: Settings
     },
     {
-      id: 4,
+      id: 3,
       title: "Double Column Grinding Machine",
       description: "Size: 3000 mm × 1500 mm × 900 mm",
       image: "/lovable-uploads/b64f203a-cce7-4aa4-8b93-2e565467b05b.png",
@@ -36,52 +28,12 @@ const InfrastructureSection = () => {
       icon: Settings
     },
     {
-      id: 5,
+      id: 4,
       title: "Floor Drilling HMC Machine",
       description: "Size: 3000 mm × 1500 mm × 900 mm",
       image: "/lovable-uploads/9d117e6c-5698-47bc-a505-4f56a6d34802.png",
       alt: "Floor drilling HMC machine",
       icon: Cog
-    },
-    {
-      id: 6,
-      title: "Torque Test Inspection",
-      description: "Torque testing is conducted on large assemblies to ensure structural and joint integrity during precision operations.",
-      image: "/lovable-uploads/ce3ae9e4-0811-4ed1-ac84-ae203e5ecf1a.png",
-      alt: "Torque test inspection on large assemblies",
-      icon: Wrench
-    },
-    {
-      id: 7,
-      title: "Flatness Inspection Using Digital Instruments",
-      description: "High-accuracy flatness measurements performed using calibrated digital levels, ensuring compliance with surface flatness tolerances.",
-      image: "/lovable-uploads/9c3b66e1-9a32-482d-83b9-c936ff3c9c85.png",
-      alt: "Flatness inspection using digital instruments",
-      icon: Ruler
-    },
-    {
-      id: 8,
-      title: "Final Assembly Laser Inspection",
-      description: "Laser-based alignment ensures accurate final positioning and flatness verification before dispatch.",
-      image: "/lovable-uploads/4dab7894-2392-4f24-9e86-56e804e0a7a9.png",
-      alt: "Final assembly laser inspection",
-      icon: Zap
-    },
-    {
-      id: 9,
-      title: "Flatness Inspection Using Digital Instruments",
-      description: "Repeatable and precise flatness verification process carried out with NABL-traceable digital equipment.",
-      image: "/lovable-uploads/2c6d8a0d-343f-43dc-979b-6485b6b02a2e.png",
-      alt: "Flatness inspection using digital instruments",
-      icon: Ruler
-    },
-    {
-      id: 10,
-      title: "Granite Temperature Inspection with Testo Digital Thermometer",
-      description: "Thermal measurement of granite surfaces using Testo meters to ensure temperature-controlled calibration and lapping.",
-      image: "/lovable-uploads/765a99c3-b206-46a9-99f8-fa427dbc4308.png",
-      alt: "Granite temperature inspection with Testo digital thermometer",
-      icon: Thermometer
     }
   ];
 
@@ -91,7 +43,7 @@ const InfrastructureSection = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-foreground mb-4">
-            Machines & Quality Control Facility
+            Plant Machinery & Specifications
           </h2>
           <p className="text-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed">
             We are equipped with world-class granite calibration machinery, laser inspection tools, 

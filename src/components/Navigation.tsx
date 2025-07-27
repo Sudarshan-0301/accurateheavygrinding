@@ -16,7 +16,7 @@ const Navigation = ({ activeSection, onSectionChange }: NavigationProps) => {
     { id: 'services', label: 'Our Services' },
     { id: 'process', label: 'Our Process' },
     { id: 'industries', label: 'Industries' },
-    { id: 'infrastructure', label: 'Machines & Quality Control Facility' },
+    { id: 'infrastructure', label: 'Plant Machinery & Specifications' },
     { id: 'contact', label: 'Contact Us' },
   ];
 
