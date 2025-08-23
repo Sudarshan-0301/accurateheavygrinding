@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Menu, X, Building } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 interface NavigationProps {
@@ -26,7 +26,7 @@ const Navigation = ({ activeSection, onSectionChange }: NavigationProps) => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center space-x-3">
-            <Building className="h-8 w-8 text-primary" />
+            <img src="/lovable-uploads/3a564153-6c4c-478c-9232-7e4269081eaa.png" alt="AHG Logo" className="h-12 w-auto" />
             <div>
               <h1 className="text-xl font-bold text-foreground">Accurate Heavy Grinding</h1>
               <p className="text-xs text-muted-foreground">Precision Granite Services</p>
