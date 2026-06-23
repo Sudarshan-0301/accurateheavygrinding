@@ -14,13 +14,13 @@ const machines = [
   {
     title: 'Double Column Grinding Machine',
     spec: '3000 mm × 1500 mm × 900 mm',
-    image: '/lovable-uploads/b64f203a-cce7-4aa4-8b93-2e565467b05b.jpg',
+    image: '/lovable-uploads/double-column-grinding.jpg',
     alt: 'Double column grinding machine',
   },
   {
     title: 'Floor Drilling HMC Machine',
     spec: '3000 mm × 1500 mm × 900 mm',
-    image: '/lovable-uploads/9d117e6c-5698-47bc-a505-4f56a6d34802.jpg',
+    image: '/lovable-uploads/floor-drilling-hmc.jpg',
     alt: 'Floor drilling HMC machine',
   },
 ];
