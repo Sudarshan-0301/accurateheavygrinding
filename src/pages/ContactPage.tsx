@@ -110,6 +110,20 @@ const ContactPage = () => {
                 <span>Gat No. 52, RTO Road, Near Malhar Gad Road, Behind Aai Saheb Hotel, Kalewadi, Dive, Tal-Purandar, Pune – 412301</span>
               </a>
             </div>
+
+            {/* Google Maps embed */}
+            <div className="rounded-lg overflow-hidden border border-border">
+              <iframe
+                title="Accurate Heavy Grinding location"
+                src="https://maps.google.com/maps?q=18.4096251,74.0202855&z=17&output=embed"
+                width="100%"
+                height="220"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
+            </div>
           </div>
 
           <div className="border-t border-border pt-6">

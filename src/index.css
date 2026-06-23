@@ -2,6 +2,49 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'GC Vensca Mono';
+  src: url('/fonts/GCVenscaMonoDemo-ExtraLight.ttf') format('truetype');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'GC Vensca Mono';
+  src: url('/fonts/GCVenscaMonoDemo-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'GC Vensca Mono';
+  src: url('/fonts/GCVenscaMonoDemo-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'GC Vensca Mono';
+  src: url('/fonts/GCVenscaMonoDemo-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'GC Vensca Mono';
+  src: url('/fonts/GCVenscaMonoDemo-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'GC Vensca Mono';
+  src: url('/fonts/GCVenscaMonoDemo-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 @layer base {
   :root {
     --background: 210 20% 98%;
@@ -114,5 +157,6 @@
 
   body {
     @apply bg-background text-foreground;
+    font-family: 'GC Vensca Mono', monospace;
   }
 }
