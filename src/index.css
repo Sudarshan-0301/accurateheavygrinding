@@ -2,54 +2,51 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
-
 @layer base {
   :root {
-    --background: 0 0% 98%;
-    --foreground: 220 25% 15%;
+    --background: 210 20% 98%;
+    --foreground: 222 45% 12%;
 
     --card: 0 0% 100%;
-    --card-foreground: 220 25% 15%;
+    --card-foreground: 222 45% 12%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 220 25% 15%;
+    --popover-foreground: 222 45% 12%;
 
-    --primary: 210 100% 40%;
+    /* Navy blue matching AHG logo */
+    --primary: 222 52% 28%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 220 15% 92%;
-    --secondary-foreground: 220 25% 15%;
+    --secondary: 210 20% 94%;
+    --secondary-foreground: 222 45% 12%;
 
-    --muted: 220 15% 96%;
-    --muted-foreground: 220 15% 45%;
+    --muted: 210 20% 96%;
+    --muted-foreground: 220 20% 48%;
 
-    --accent: 220 15% 90%;
-    --accent-foreground: 220 25% 15%;
+    --accent: 210 20% 92%;
+    --accent-foreground: 222 45% 12%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 220 15% 88%;
-    --input: 220 15% 88%;
-    --ring: 210 100% 40%;
+    --border: 210 20% 88%;
+    --input: 210 20% 88%;
+    --ring: 222 52% 28%;
 
-    /* Industrial theme colors */
-    --steel-blue: 210 30% 25%;
-    --steel-blue-light: 210 30% 35%;
-    --industrial-grey: 220 15% 85%;
-    --industrial-grey-dark: 220 20% 70%;
-    --precision-blue: 210 100% 40%;
-    --manufacturing-accent: 200 80% 50%;
+    /* Brand colors matching AHG navy logo */
+    --steel-blue: 222 48% 20%;
+    --steel-blue-light: 222 45% 30%;
+    --industrial-grey: 210 15% 88%;
+    --industrial-grey-dark: 210 18% 72%;
+    --precision-blue: 222 52% 28%;
+    --manufacturing-accent: 38 82% 50%;
 
     /* Gradients */
     --gradient-industrial: linear-gradient(135deg, hsl(var(--steel-blue)), hsl(var(--precision-blue)));
-    --gradient-hero: linear-gradient(135deg, hsl(var(--steel-blue) / 0.95), hsl(var(--precision-blue) / 0.85));
-    
+    --gradient-hero: linear-gradient(135deg, hsl(var(--steel-blue) / 0.92), hsl(var(--precision-blue) / 0.80));
+
     /* Shadows */
-    --shadow-professional: 0 4px 20px hsl(var(--steel-blue) / 0.1);
+    --shadow-professional: 0 4px 20px hsl(var(--steel-blue) / 0.12);
     --shadow-card: 0 2px 10px hsl(var(--steel-blue) / 0.08);
 
     --radius: 0.5rem;

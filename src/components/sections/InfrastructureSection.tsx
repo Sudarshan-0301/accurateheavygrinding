@@ -7,7 +7,7 @@ const InfrastructureSection = () => {
       id: 1,
       title: "Double Column VMC Machine",
       description: "Size: 4000 mm × 3000 mm × 600 mm",
-      image: "/lovable-uploads/f9b15fad-c2c1-45b5-a7fa-b2bbc58e4986.png",
+      image: "/lovable-uploads/f9b15fad-c2c1-45b5-a7fa-b2bbc58e4986.jpg",
       alt: "Double column VMC machine for precision machining",
       icon: Cog
     },
@@ -15,7 +15,7 @@ const InfrastructureSection = () => {
       id: 2,
       title: "Precision Grinding Machine",
       description: "Size: 3000 mm × 600 mm × 600 mm",
-      image: "/lovable-uploads/d8d8a0a1-0992-42cd-a5de-a9872bfaa5b6.png",
+      image: "/lovable-uploads/d8d8a0a1-0992-42cd-a5de-a9872bfaa5b6.jpg",
       alt: "Precision grinding machine for surface finishing",
       icon: Settings
     },
@@ -23,7 +23,7 @@ const InfrastructureSection = () => {
       id: 3,
       title: "Double Column Grinding Machine",
       description: "Size: 3000 mm × 1500 mm × 900 mm",
-      image: "/lovable-uploads/b64f203a-cce7-4aa4-8b93-2e565467b05b.png",
+      image: "/lovable-uploads/b64f203a-cce7-4aa4-8b93-2e565467b05b.jpg",
       alt: "Double column grinding machine",
       icon: Settings
     },
@@ -31,7 +31,7 @@ const InfrastructureSection = () => {
       id: 4,
       title: "Floor Drilling HMC Machine",
       description: "Size: 3000 mm × 1500 mm × 900 mm",
-      image: "/lovable-uploads/9d117e6c-5698-47bc-a505-4f56a6d34802.png",
+      image: "/lovable-uploads/9d117e6c-5698-47bc-a505-4f56a6d34802.jpg",
       alt: "Floor drilling HMC machine",
       icon: Cog
     }

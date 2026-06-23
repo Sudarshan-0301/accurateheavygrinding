@@ -21,14 +21,16 @@ const Navigation = ({ activeSection, onSectionChange }: NavigationProps) => {
   ];
 
   return (
-    <nav className="bg-card border-b border-border sticky top-0 z-50 shadow-sm">
+    <nav className="bg-white border-b-2 border-primary/20 sticky top-0 z-50 shadow-md">
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-18 py-2">
           {/* Logo */}
           <div className="flex items-center space-x-3">
-            <img src="/lovable-uploads/3a564153-6c4c-478c-9232-7e4269081eaa.png" alt="AHG Logo" className="h-12 w-auto" />
+            <div className="rounded-lg overflow-hidden bg-[hsl(222,48%,20%)] p-0.5">
+              <img src="/ahg-logo.jpg" alt="AHG Logo" className="h-12 w-auto" loading="eager" />
+            </div>
             <div>
-              <h1 className="text-xl font-bold text-foreground">Accurate Heavy Grinding</h1>
+              <h1 className="text-lg font-bold text-[hsl(222,52%,28%)] leading-tight">Accurate Heavy Grinding</h1>
               <p className="text-xs text-muted-foreground">Precision Granite Services</p>
             </div>
           </div>
@@ -40,7 +42,7 @@ const Navigation = ({ activeSection, onSectionChange }: NavigationProps) => {
                 key={item.id}
                 variant={activeSection === item.id ? "default" : "ghost"}
                 onClick={() => onSectionChange(item.id)}
-                className="text-sm"
+                className={`text-sm font-medium ${activeSection === item.id ? 'bg-[hsl(222,52%,28%)] text-white hover:bg-[hsl(222,52%,24%)]' : 'text-[hsl(222,45%,20%)] hover:text-[hsl(222,52%,28%)] hover:bg-[hsl(222,52%,28%)]/8'}`}
               >
                 {item.label}
               </Button>
