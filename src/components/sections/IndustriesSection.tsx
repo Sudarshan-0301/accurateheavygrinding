@@ -131,7 +131,7 @@ const IndustriesSection = () => {
           {[
             { number: '50+', label: 'Industries Served' },
             { number: '500+', label: 'Projects Completed' },
-            { number: '15+', label: 'Years Experience' },
+            { number: '5+', label: 'Years Experience' },
             { number: '100%', label: 'Quality Assurance' }
           ].map((stat, index) => (
             <div key={index} className="text-center">

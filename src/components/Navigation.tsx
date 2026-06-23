@@ -1,83 +1,80 @@
 import { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
-import { Button } from '@/components/ui/button';
 
-interface NavigationProps {
-  activeSection: string;
-  onSectionChange: (section: string) => void;
-}
+const navItems = [
+  { path: '/', label: 'Home' },
+  { path: '/about', label: 'About' },
+  { path: '/services', label: 'Services' },
+  { path: '/process', label: 'Process' },
+  { path: '/industries', label: 'Industries' },
+  { path: '/infrastructure', label: 'Machinery' },
+  { path: '/contact', label: 'Contact' },
+];
 
-const Navigation = ({ activeSection, onSectionChange }: NavigationProps) => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const navItems = [
-    { id: 'home', label: 'Home' },
-    { id: 'about', label: 'About Us' },
-    { id: 'services', label: 'Our Services' },
-    { id: 'process', label: 'Our Process' },
-    { id: 'industries', label: 'Industries' },
-    { id: 'infrastructure', label: 'Plant Machinery & Specifications' },
-    { id: 'contact', label: 'Contact Us' },
-  ];
+const Navigation = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const { pathname } = useLocation();
 
   return (
-    <nav className="bg-white border-b-2 border-primary/20 sticky top-0 z-50 shadow-md">
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-18 py-2">
-          {/* Logo */}
-          <div className="flex items-center space-x-3">
-            <div className="rounded-lg overflow-hidden bg-[hsl(222,48%,20%)] p-0.5">
-              <img src="/ahg-logo.jpg" alt="AHG Logo" className="h-12 w-auto" loading="eager" />
+    <nav className="bg-white border-b border-border sticky top-0 z-50">
+      <div className="container mx-auto px-6">
+        <div className="flex items-center justify-between h-24">
+          <Link to="/" className="flex items-center gap-3" onClick={() => setIsOpen(false)}>
+            <img src="/ahg-logo.jpg" alt="AHG" className="h-16 w-auto flex-shrink-0" loading="eager" />
+            <div className="leading-tight">
+              <span className="block text-base font-bold text-[hsl(222,52%,28%)]">Accurate Heavy Grinding</span>
+              <span className="block text-xs text-muted-foreground">Precision Granite Services</span>
             </div>
-            <div>
-              <h1 className="text-lg font-bold text-[hsl(222,52%,28%)] leading-tight">Accurate Heavy Grinding</h1>
-              <p className="text-xs text-muted-foreground">Precision Granite Services</p>
-            </div>
+          </Link>
+
+          {/* Desktop links */}
+          <div className="hidden md:flex items-center gap-1">
+            {navItems.map(({ path, label }) => {
+              const active = pathname === path;
+              return (
+                <Link
+                  key={path}
+                  to={path}
+                  className={`px-3 py-1.5 text-sm font-medium rounded transition-colors ${
+                    active
+                      ? 'text-[hsl(222,52%,28%)] bg-[hsl(222,52%,28%)]/8'
+                      : 'text-muted-foreground hover:text-foreground hover:bg-muted'
+                  }`}
+                >
+                  {label}
+                </Link>
+              );
+            })}
           </div>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-1">
-            {navItems.map((item) => (
-              <Button
-                key={item.id}
-                variant={activeSection === item.id ? "default" : "ghost"}
-                onClick={() => onSectionChange(item.id)}
-                className={`text-sm font-medium ${activeSection === item.id ? 'bg-[hsl(222,52%,28%)] text-white hover:bg-[hsl(222,52%,24%)]' : 'text-[hsl(222,45%,20%)] hover:text-[hsl(222,52%,28%)] hover:bg-[hsl(222,52%,28%)]/8'}`}
-              >
-                {item.label}
-              </Button>
-            ))}
-          </div>
-
-          {/* Mobile Menu Toggle */}
-          <Button
-            variant="ghost"
-            size="icon"
-            className="md:hidden"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
+          {/* Mobile toggle */}
+          <button
+            className="md:hidden p-2 rounded text-muted-foreground hover:text-foreground hover:bg-muted"
+            onClick={() => setIsOpen(!isOpen)}
+            aria-label="Toggle menu"
           >
-            {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-          </Button>
+            {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+          </button>
         </div>
 
-        {/* Mobile Navigation */}
-        {isMenuOpen && (
-          <div className="md:hidden py-4 border-t border-border">
-            <div className="flex flex-col space-y-2">
-              {navItems.map((item) => (
-                <Button
-                  key={item.id}
-                  variant={activeSection === item.id ? "default" : "ghost"}
-                  onClick={() => {
-                    onSectionChange(item.id);
-                    setIsMenuOpen(false);
-                  }}
-                  className="justify-start"
-                >
-                  {item.label}
-                </Button>
-              ))}
-            </div>
+        {/* Mobile menu */}
+        {isOpen && (
+          <div className="md:hidden border-t border-border py-3 space-y-1">
+            {navItems.map(({ path, label }) => (
+              <Link
+                key={path}
+                to={path}
+                onClick={() => setIsOpen(false)}
+                className={`block px-3 py-2 text-sm font-medium rounded transition-colors ${
+                  pathname === path
+                    ? 'text-[hsl(222,52%,28%)] bg-[hsl(222,52%,28%)]/8'
+                    : 'text-muted-foreground hover:text-foreground hover:bg-muted'
+                }`}
+              >
+                {label}
+              </Link>
+            ))}
           </div>
         )}
       </div>

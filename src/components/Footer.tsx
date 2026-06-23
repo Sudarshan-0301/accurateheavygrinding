@@ -1,107 +1,73 @@
-import { Building, Mail, Phone } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { Phone, Mail, MapPin } from 'lucide-react';
 
-const Footer = () => {
-  const currentYear = new Date().getFullYear();
-
-  return (
-    <footer className="bg-steel-blue text-primary-foreground">
-      {/* Main Footer */}
-      <div className="container mx-auto px-4 py-12">
-        <div className="grid md:grid-cols-3 gap-8">
-          {/* Company Info */}
-          <div className="space-y-4">
-            <div className="flex items-center space-x-3">
-              <Building className="h-8 w-8 text-manufacturing-accent" />
-              <div>
-                <h3 className="text-xl font-bold">Accurate Heavy Grinding</h3>
-                <p className="text-sm text-primary-foreground/80">Precision Granite Services</p>
-              </div>
-            </div>
-            <p className="text-primary-foreground/90 leading-relaxed">
-              We don't just grind granite. We build trust – one perfect flat surface at a time. 
-              Specializing in NABL/NPL traceable calibration and precision granite surface solutions.
-            </p>
-          </div>
-
-          {/* Quick Links */}
-          <div className="space-y-4">
-            <h4 className="text-lg font-semibold text-manufacturing-accent">Our Services</h4>
-            <ul className="space-y-2 text-sm">
-              <li className="text-primary-foreground/90 hover:text-manufacturing-accent cursor-pointer transition-colors">
-                Granite Surface Plate Lapping
-              </li>
-              <li className="text-primary-foreground/90 hover:text-manufacturing-accent cursor-pointer transition-colors">
-                NABL/NPL Traceable Calibration
-              </li>
-              <li className="text-primary-foreground/90 hover:text-manufacturing-accent cursor-pointer transition-colors">
-                Flatness Restoration
-              </li>
-              <li className="text-primary-foreground/90 hover:text-manufacturing-accent cursor-pointer transition-colors">
-                CMM/VMM Base Plate Manufacturing
-              </li>
-              <li className="text-primary-foreground/90 hover:text-manufacturing-accent cursor-pointer transition-colors">
-                Custom Granite Machining
-              </li>
-            </ul>
-          </div>
-
-          {/* Contact Info */}
-          <div className="space-y-4">
-            <h4 className="text-lg font-semibold text-manufacturing-accent">Contact Information</h4>
-            <div className="space-y-3 text-sm">
-              <div className="flex items-center space-x-3">
-                <Phone className="h-4 w-4 text-manufacturing-accent flex-shrink-0" />
-                <div className="space-y-1">
-                  <a href="tel:+919225505785" className="text-manufacturing-accent hover:text-primary-foreground transition-colors block">
-                    📞 +91 9225505785
-                  </a>
-                  <a href="tel:+919225505784" className="text-manufacturing-accent hover:text-primary-foreground transition-colors block">
-                    📞 +91 9225505784
-                  </a>
-                </div>
-              </div>
-              <div className="flex items-center space-x-3">
-                <Mail className="h-4 w-4 text-manufacturing-accent flex-shrink-0" />
-                <a href="mailto:accurateheavygrinding@outlook.com" className="text-manufacturing-accent hover:text-primary-foreground transition-colors">
-                  📧 accurateheavygrinding@outlook.com
-                </a>
-              </div>
-              <div className="text-primary-foreground/90">
-                <strong>GST:</strong> 27ACBFA6452H1ZH<br />
-                <strong>MSME:</strong> UDYAM-MH-26-0438749
-              </div>
-            </div>
+const Footer = () => (
+  <footer className="bg-[hsl(222,48%,20%)] text-white">
+    <div className="container mx-auto px-6 py-12">
+      <div className="grid md:grid-cols-3 gap-10">
+        <div className="space-y-3">
+          <h3 className="font-bold text-lg">Accurate Heavy Grinding</h3>
+          <p className="text-white/70 text-sm leading-relaxed">
+            Precision granite surface plate calibration, lapping, and reconditioning. NABL/NPL traceable. Pune, India.
+          </p>
+          <div className="flex flex-wrap gap-x-3 gap-y-1 pt-1 text-xs text-white/50">
+            <span>GST: 27ACBFA6452H1ZH</span>
+            <span>MSME: UDYAM-MH-26-0438749</span>
           </div>
         </div>
 
-        {/* Certifications & Standards */}
-        <div className="mt-8 pt-8 border-t border-primary-foreground/20">
-          <div className="text-center">
-            <h4 className="text-lg font-semibold text-manufacturing-accent mb-4">Quality Standards & Certifications</h4>
-            <div className="flex flex-wrap justify-center gap-6 text-sm text-primary-foreground/90">
-              <span className="bg-primary-foreground/10 px-3 py-1 rounded-full">NABL Traceable</span>
-              <span className="bg-primary-foreground/10 px-3 py-1 rounded-full">NPL Standards</span>
-              <span className="bg-primary-foreground/10 px-3 py-1 rounded-full">IS/ASTM Compliant</span>
-              <span className="bg-primary-foreground/10 px-3 py-1 rounded-full">MSME Certified</span>
-            </div>
+        <div className="space-y-3">
+          <h4 className="font-semibold text-xs uppercase tracking-wider text-white/50">Services</h4>
+          <ul className="space-y-2 text-sm text-white/80">
+            {[
+              'Surface Plate Lapping & Scrapping',
+              'NABL/NPL Traceable Calibration',
+              'Flatness Restoration',
+              'CMM/VMM Base Plate Manufacturing',
+              'Custom Granite Machining',
+            ].map((s) => (
+              <li key={s}>
+                <Link to="/services" className="hover:text-white transition-colors">{s}</Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div className="space-y-4">
+          <h4 className="font-semibold text-xs uppercase tracking-wider text-white/50">Contact</h4>
+          <div className="space-y-3 text-sm">
+            <a href="tel:+919225505785" className="flex items-center gap-2 text-white/80 hover:text-white transition-colors">
+              <Phone className="h-4 w-4 flex-shrink-0" /> +91 9225505785
+            </a>
+            <a href="tel:+919225505784" className="flex items-center gap-2 text-white/80 hover:text-white transition-colors">
+              <Phone className="h-4 w-4 flex-shrink-0" /> +91 9225505784
+            </a>
+            <a href="mailto:accurateheavygrinding@outlook.com" className="flex items-center gap-2 text-white/80 hover:text-white transition-colors">
+              <Mail className="h-4 w-4 flex-shrink-0" /> accurateheavygrinding@outlook.com
+            </a>
+            <a
+              href="https://maps.app.goo.gl/mmMkzPEMb7DVRd1P8"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-start gap-2 text-white/80 hover:text-white transition-colors"
+            >
+              <MapPin className="h-4 w-4 flex-shrink-0 mt-0.5" />
+              <span>Gat No. 52, RTO Road, Kalewadi, Dive, Tal-Purandar, Pune – 412301</span>
+            </a>
           </div>
         </div>
       </div>
 
-      {/* Bottom Footer */}
-      <div className="border-t border-primary-foreground/20">
-        <div className="container mx-auto px-4 py-6">
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            {/* Copyright */}
-            <div className="text-sm text-primary-foreground/80">
-              © {currentYear} Accurate Heavy Grinding. All rights reserved.
-            </div>
-
-          </div>
+      <div className="border-t border-white/10 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center gap-3 text-xs text-white/40">
+        <span>© {new Date().getFullYear()} Accurate Heavy Grinding. All rights reserved.</span>
+        <div className="flex flex-wrap gap-x-4 gap-y-1 justify-center">
+          {['NABL Traceable', 'NPL Standards', 'IS/ASTM Compliant', 'MSME Certified'].map((c) => (
+            <span key={c}>{c}</span>
+          ))}
         </div>
       </div>
-    </footer>
-  );
-};
+    </div>
+  </footer>
+);
 
 export default Footer;

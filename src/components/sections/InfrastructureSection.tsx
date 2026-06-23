@@ -7,7 +7,7 @@ const InfrastructureSection = () => {
       id: 1,
       title: "Double Column VMC Machine",
       description: "Size: 4000 mm × 3000 mm × 600 mm",
-      image: "/lovable-uploads/f9b15fad-c2c1-45b5-a7fa-b2bbc58e4986.jpg",
+      image: "/lovable-uploads/double-column-vmc.jpg",
       alt: "Double column VMC machine for precision machining",
       icon: Cog
     },
@@ -15,7 +15,7 @@ const InfrastructureSection = () => {
       id: 2,
       title: "Precision Grinding Machine",
       description: "Size: 3000 mm × 600 mm × 600 mm",
-      image: "/lovable-uploads/d8d8a0a1-0992-42cd-a5de-a9872bfaa5b6.jpg",
+      image: "/lovable-uploads/precision-grinding.jpg",
       alt: "Precision grinding machine for surface finishing",
       icon: Settings
     },
@@ -92,7 +92,7 @@ const InfrastructureSection = () => {
                 <strong>25,000+ sq ft</strong> Manufacturing Area
               </span>
               <span className="flex items-center gap-2">
-                <strong>±0.001mm</strong> Precision Accuracy
+                <strong>±0.001 µm</strong> Precision Accuracy
               </span>
               <span className="flex items-center gap-2">
                 <strong>Temperature Controlled</strong> Environment
