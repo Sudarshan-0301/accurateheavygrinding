@@ -19,8 +19,8 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				sans: ['GC Vensca Mono', 'monospace'],
-				mono: ['GC Vensca Mono', 'monospace'],
+				sans: ['Verdana', 'Geneva', 'sans-serif'],
+				mono: ['Verdana', 'Geneva', 'sans-serif'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',
